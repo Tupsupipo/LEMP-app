@@ -1,9 +1,16 @@
-#                     /etc/nginx/sites-available/lemp-app
 server {
         listen 80;
-        server_name censored; # replace with your server's IP or domain
+        server_name 195.148.21.118; # replace with your server's IP or domain
+
+        root /var/www/nginx_site;
+        index index.html;
+
         location / {
-                proxy_pass http://127.0.0.1:5000;
+            try_files $uri $uri/ =404;
+    }
+
+        location /viikko2/ {
+                proxy_pass http://127.0.0.1:5000/;
                 proxy_http_version 1.1;
                 proxy_set_header Host $host;
                 proxy_set_header X-Real-IP $remote_addr;
