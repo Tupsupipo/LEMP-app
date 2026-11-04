@@ -1,4 +1,4 @@
-  GNU nano 8.7.1                     /etc/nginx/sites-available/lemp-app
+#                     /etc/nginx/sites-available/lemp-app
 server {
         listen 80;
         server_name censored; # replace with your server's IP or domain
