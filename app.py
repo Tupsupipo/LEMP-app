@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 import mysql.connector
 app = Flask(__name__)
+
 @app.route('/')
 def home():
         # Connect to MySQL/MariaDB
@@ -16,6 +17,6 @@ def home():
         # Clean up
         cursor.close()
         conn.close()
-        return f"<h1>{result[0]}</h1>"
+        return render_template("index.html", result=result[0])
 if __name__ == '__main__':
         app.run(host='0.0.0.0', port=5000)
