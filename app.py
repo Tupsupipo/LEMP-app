@@ -11,10 +11,12 @@ def home():
                 password="censored",
                 database="censoreddb"
         )
-         cursor = conn.cursor()
-        cursor.execute("SELECT 'PLACEHOLDER'")
+        cursor = conn.cursor()
+        cursor.execute("UPDATE visit_counter SET count = count + 1 WHERE counterID = 1")
+        conn.commit()
+        cursor.execute("SELECT count FROM visit_counter WHERE counterID = 1")
         result = cursor.fetchone()
-        # Clean up
+	# Clean up
         cursor.close()
         conn.close()
         return render_template("index.html", result=result[0])
