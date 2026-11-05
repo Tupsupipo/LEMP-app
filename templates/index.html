@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Flask App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LEMP-app</title>
+  <style>
+    html {
+      min-height: 100vh;
+      background-image: url("static/images/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    body {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-family: sans-serif;
+      line-height: 1.6;
+      background: rgba(0, 0, 0, 0);
+      color: #3ab855;
+    }
+    h1, h2 { color: #f0f2f3; }
+    .textbox {
+      background: rgba(8, 45, 75, 0.85);
+      color: #f0f2f3;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      max-width: 100%;
+      box-sizing: border-box;
+      word-wrap: break-word;
+
+    }
+    .textbox h2 {
+      margin: 0 0 10px;
+      color: #f0f2f3;
+    }
+    .textbox p {
+      margin: 0;
+      color: #dfeaf6;
+    }
+    .hyperbox {
+      background: rgba(90, 98, 110, 0.85);
+      color: #f9fbfc;
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      max-width: 100%;
+      box-sizing: border-box;
+      word-wrap: break-word;
+
+    }
+    .hyperbox p {
+      margin: 0;
+      color: hsl(75, 22%, 96%);
+    }
+    pre { background: #2c5d85; padding: 16px; overflow-x: auto; }
+  </style>
 </head>
 <body>
-    <h2>Welcome to Flask</h2>
-    <h1>{{ result }}</h1>
-    <p>This is a basic template rendering example.</p>
+    
+  <div class="textbox">
+    <h1>Week 2: LEMP-stack</h1>
+    <h3>Welcome to my second linux project! This site is built with the LEMP stack. It is running a Flask application under Nginx.</h3>
+  
+    <h2>There have been <b>{{ result }}</b> visitors on this page</h2>
+    <h3>Visitor counter is stored in the MySQL database. Its operation is handled by the Flask application by executing SQL queries.</h3>
+    <h3>It increments value on a database each time the page is visited or refreshed and it returns the updated visitorcount.</h3>
+    <h2>Reboot test</h2>
+    <h3>Reboot test for server is done. SQL queries are not implemented yet.</h3>
+</div>
+  <div class="hyperbox">
+    <p>Links:</p>
+    <p><a href="https://github.com">    Project sourcecodes on GitHub</a></p>
+    <p><a href="http://195.148.21.118">     Back to the week one</a></p>
+</div>
 </body>
 </html>

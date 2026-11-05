@@ -11,8 +11,8 @@ def home():
                 password="censored",
                 database="censoreddb"
         )
-        cursor = conn.cursor()
-        cursor.execute("SELECT 'Hello from MySQL!'")
+         cursor = conn.cursor()
+        cursor.execute("SELECT 'PLACEHOLDER'")
         result = cursor.fetchone()
         # Clean up
         cursor.close()
