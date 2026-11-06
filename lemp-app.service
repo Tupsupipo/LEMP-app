@@ -3,6 +3,7 @@
 Description=Gunicorn instance to serve Flask LEMP app
 After=network.target
 [Service]
+EnvironmentFile=/etc/counter.env
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/lemp-app
